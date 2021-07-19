@@ -865,26 +865,26 @@
             </div>
           </div>
           <div class="col-md-6">
-            <form action="POST" data-netlify="true">
+            <form class="contact-form" action="POST" data-netlify="true">
               <div class="mb-3">
                 <label lang="tw" for="nameInput" class="form-label">姓名</label>
                 <label lang="en" for="nameInput" class="form-label">Name</label>
-                <input id="name" name="name" type="text" class="form-control" id="nameInput">
+                <input id="name" name="name" type="text" class="form-control" id="nameInput" required>
               </div>
               <div class="mb-3">
                 <label lang="tw" for="emailInput" class="form-label">電子郵件</label>
                 <label lang="en" for="emailInput" class="form-label">Email</label>
-                <input type="text" id="email" name="email" class="form-control">
+                <input type="text" id="email" name="email" class="form-control" required>
               </div>
               <div class="mb-3">
                 <label lang="tw" for="msgInput" class="form-label">聯絡訊息</label>
                 <label lang="en" for="msgInput" class="form-label">Message</label>
-                <textarea type="text" id="message" name="message" class="form-control" rows="5"></textarea>
+                <textarea type="text" id="message" name="message" class="form-control" rows="5" required></textarea>
               </div>
-              <a class="btn btn-custom-primary-border btn-lg fw-bold" href="#">
+              <button type="submit" class="btn btn-custom-primary-border btn-lg fw-bold">
                 <span lang="tw">送出訊息</span>
                 <span lang="en">Send Message</span>
-              </a>
+              </button>
             </form>
           </div>
         </div>

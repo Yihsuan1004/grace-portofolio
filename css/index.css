@@ -295,6 +295,10 @@ ol, ul{
   border-color: #36F1CD;
   color: #36F1CD;
 }
+.contact-form button:hover{
+  color: #010101;
+  background-color: #36F1CD;
+}
 
 footer{
   text-align: center;
