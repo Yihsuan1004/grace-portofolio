@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $(window).on('load', function () {
+        $('#loading').hide();
+      }) 
 
     $('[lang="en"]').hide();
     $('#select_language').click(function() {
