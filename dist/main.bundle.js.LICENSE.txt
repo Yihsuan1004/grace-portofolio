@@ -41,6 +41,8 @@
  * Date: 2021-03-02T17:08Z
  */
 
+/*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
+
 /**
  * jquery-circle-progress - jQuery Plugin to draw animated circular progress bars:
  * {@link http://kottenator.github.io/jquery-circle-progress/}

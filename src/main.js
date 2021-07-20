@@ -1,6 +1,6 @@
-import jQuery from 'jquery';
-import circleProgress from 'jquery-circle-progress';
-import slick from 'slick-carousel';
+import '../src/js/jquery';
+import '../src/js/circle-progress.min';
+import '../src/js/slick.min';
 import '../src/styles/animate.css';
 import '../src/styles/index.css';
 import '../src/js/gsap.min';
