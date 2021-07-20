@@ -1,8 +1,12 @@
 $(document).ready(function () {
+
     $(window).on('load', function () {
         $('#loading').hide();
+        $('body').removeClass('fixed-top');
+        ScrollTrigger.refresh();
       }) 
 
+    /* ---- 語言切換  ----*/
     $('[lang="en"]').hide();
     $('#select_language').click(function() {
         $('[lang="tw"]').toggle();
@@ -92,7 +96,8 @@ $(document).ready(function () {
     let aboutmeTL = gsap.timeline({
         scrollTrigger: {
             trigger: ".aboutme-wrapper",
-            start: "top 50%",
+            start: "top 80%",
+            endTrigger: ".exp-wrapper",
             end: "bottom top",
             toggleActions: "restart none none reset"
         }
@@ -103,7 +108,7 @@ $(document).ready(function () {
     let expTL = gsap.timeline({
         scrollTrigger: {
             trigger: ".exp-wrapper",
-            start: "top 50%",
+            start: "top 80%",
             end: "bottom top",
             toggleActions: "restart none none reset"
         }
@@ -157,7 +162,7 @@ $(document).ready(function () {
     let workTL = gsap.timeline({
         scrollTrigger: {
             trigger: ".work-wrapper",
-            start: "top 50%",
+            start: "top 80%",
             end: "bottom top",
             toggleActions: "restart none none reset"
         }
