@@ -380,7 +380,7 @@ footer{
   html { font-size: 12px ;} 
   .dynamic-texts .dynamic-occupation .type-content::after{
     bottom: 0;
-    height: 06px;
+    height: 60px;
   }
   .skill-wrapper, .work-wrapper, .contact-wrapper, .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
     padding: 0 1rem;

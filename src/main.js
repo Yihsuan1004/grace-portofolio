@@ -1,11 +1,17 @@
+import jQuery from 'jquery';
+import circleProgress from 'jquery-circle-progress';
 import '../src/styles/animate.css';
 import '../src/styles/index.css';
+import '../src/js/gsap.min';
+import '../src/js/ScrollTrigger.min';
 
 $(document).ready(function () {
+    console.log('i am ready')
     $(window).on('load', function () {
         $('#loading').hide();
         $('body').removeClass('fixed-top');
         ScrollTrigger.refresh();
+        console.log('load success');
       }) 
 
     /* ---- 語言切換  ----*/
