@@ -1,0 +1,34 @@
+{
+  "name": "my-portfolio2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-icons": "^1.5.0",
+    "jquery": "^3.6.0",
+    "jquery-circle-progress": "^1.2.2",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yihsuan1004/my-portfolio2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yihsuan1004/my-portfolio2021/issues"
+  },
+  "homepage": "https://github.com/Yihsuan1004/my-portfolio2021#readme"
+}
