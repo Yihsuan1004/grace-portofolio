@@ -1,10 +1,6 @@
-import '../src/js/jquery';
-import '../src/js/circle-progress.min';
-import '../src/js/slick.min';
 import '../src/styles/animate.css';
 import '../src/styles/index.css';
-import '../src/js/gsap.min';
-import '../src/js/ScrollTrigger.min';
+
 
 $(document).ready(function () {
     console.log('i am ready')
