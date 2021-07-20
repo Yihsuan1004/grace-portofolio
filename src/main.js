@@ -9,6 +9,8 @@ $(document).ready(function () {
         $('body').removeClass('fixed-top');
         ScrollTrigger.refresh();
         console.log('load success');
+        const observer = lozad(); 
+        observer.observe();
       }) 
 
     /* ---- 語言切換  ----*/

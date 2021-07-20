@@ -40,11 +40,12 @@
       });
   </script>
    <script src="./src/js/jquery.js"></script>
-   <script src="./src/js/ScrollTrigger.min.js"></script>
-   <script src="./src/js/circle-progress.min.js"></script>
    <script src="./src/js/gsap.min.js"></script>
    <script src="./src/js/ScrollTrigger.min.js"></script>
-   <script src="./src/js/slick.min.js"></script>
+   <script src="./src/js/circle-progress.min.js" async></script>
+   <script src="./src/js/slick.min.js" async></script>
+   <script src="./src/js/lozad.js"></script>
+
    <script src="./dist/main.bundle.js"></script>
 </head>
 <body class="fixed-top">
@@ -259,7 +260,7 @@
         <div class="row col-lg-9 col-md-12 m-auto">
           <div class="aboutme-headshot col-lg-5 col-md-5 text-center">
             <div>
-              <img class="headshot-img" src="./public/assets/images/selfie.jpg" alt="my-headshot">
+              <img class="headshot-img " src="./public/assets/images/selfie.jpg" alt="my-headshot">
             </div>
             <p class="mt-5">
               <a class="btn btn-custom-primary-border btn-lg fw-bold" href="#">
@@ -537,8 +538,8 @@
           <div class="col mb-5">
             <div class="card h-100">
               <div class="img-content slider work-slider">
-                <div><img src="./public/assets/images/biji-1.JPG"></div>
-                <div><img src="./public/assets/images/biji-2.png"></div>
+                <div><img class="lozad" data-src="./public/assets/images/biji-1.JPG"></div>
+                <div><img class="lozad" data-src="./public/assets/images/biji-2.png"></div>
               </div>
               <div class="card-body">
                 <h5 lang="tw" class="card-title fw-bold">筆記商城</h5>
@@ -558,9 +559,9 @@
           <div class="col mb-5">
             <div class="card h-100">
               <div class="img-content slider work-slider">
-                <div><img src="./public/assets/images/irms-1.jpg"></div>
-                <div><img src="./public/assets/images/irms-2.jpg"></div>
-                <div><img src="./public/assets/images/irms-3.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/irms-1.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/irms-2.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/irms-3.jpg"></div>
               </div>
               <div class="card-body">
                 <h5 lang="tw" class="card-title">智慧回收媒合平台</h5>
@@ -587,9 +588,9 @@
           <div class="col mb-5">
             <div class="card h-100">
               <div class="img-content slider work-slider">
-                <div><img src="./public/assets/images/ij-1.jpg"></div>
-                <div><img src="./public/assets/images/ij-2.jpg"></div>
-                <div><img src="./public/assets/images/ij-3.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/ij-1.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/ij-2.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/ij-3.jpg"></div>
               </div>
               <div class="card-body">
                 <h5 lang="tw" class="card-title">智慧監獄管理系統</h5>
@@ -607,9 +608,9 @@
           <div class="col mb-5">
             <div class="card h-100">
               <div class="img-content slider work-slider">
-                <div><img src="./public/assets/images/gt-1.jpg"></div>
-                <div><img src="./public/assets/images/gt-2.jpg"></div>
-                <div><img src="./public/assets/images/gt-3.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/gt-1.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/gt-2.jpg"></div>
+                <div><img class="lozad" data-src="./public/assets/images/gt-3.jpg"></div>
               </div>
               <div class="card-body">
                 <h5 lang="tw" class="card-title">企業ERP系統</h5>
@@ -639,7 +640,7 @@
           <div class="col mb-5">
             <div class="card h-100">
               <div class="img-content">
-                <img src="./public/assets/images/weather.jpg">
+                <img class="lozad" data-src="./public/assets/images/weather.jpg">
               </div>
               <div class="card-body">
                 <h5 class="card-title">Weather App </h5>
@@ -659,7 +660,7 @@
           <div class="col mb-5">
             <div class="card h-100">
               <div class="img-content">
-                <img src="./public/assets/images/authlogin.jpg">
+                <img class="lozad" data-src="./public/assets/images/authlogin.jpg">
               </div>
               <div class="card-body">
                 <h5 class="card-title">React Login with Firebase</h5>
