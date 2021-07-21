@@ -40,9 +40,7 @@ a{
 ol, ul{
   padding: unset;
 }
-.overflow-hidden{
-  overflow: hidden;
-}
+
 /*-- component styles --*/
 .text-custom-primary{
   color: #36F1CD;
