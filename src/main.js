@@ -85,18 +85,6 @@ $(document).ready(function () {
         }
     }
 
-
-    // ------------ Slider ------------ 
-    $('.work-slider').slick({
-        arrows: false,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        centerMode: true,
-        centerPadding: '0px',
-    });
-    
     
 
     // ------------ Scroll Trigger Setting ------------ 
