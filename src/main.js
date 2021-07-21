@@ -1,6 +1,11 @@
 
 $(document).ready(function () {
     console.log('i am ready')
+
+    $('#my_svg').ready(()=>{
+        alert('yooo');
+    })
+
     $(window).ready(function () {
         $('#loading').hide();
         $('body').removeClass('fixed-top');
@@ -9,6 +14,7 @@ $(document).ready(function () {
         const observer = lozad(); 
         observer.observe();
     });
+
 
     /* ---- 語言切換  ----*/
     $('[lang="en"]').hide();
