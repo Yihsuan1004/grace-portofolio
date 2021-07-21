@@ -37,11 +37,14 @@ body {
 a{
   text-decoration: none;
 }
+a:hover{
+  color: #36dbf1;
+}
 ol, ul{
   padding: unset;
 }
 
-/*-- component styles --*/
+/*-- text styles --*/
 .text-custom-primary{
   color: #36F1CD;
 }
@@ -54,6 +57,8 @@ ol, ul{
 .font-light{
   color: #bbb;
 }
+
+/*-- button styles --*/
 .btn-gradient{
   background: linear-gradient(160deg,#36F1CD,#39A0ED);
   color: #32322C;
@@ -81,13 +86,13 @@ ol, ul{
   background-color: #22939b;
 }
 
+/*-- background styles --*/
 .bg-custom-primary{
   background-color: #1b1e21;
 }
 .bg-custom-secondary{
   background-color: #16181b;
 }
-
 
 
 
@@ -119,6 +124,7 @@ ol, ul{
   line-height: 1.5;
 }
 
+
 /*-- about me --*/
 .aboutme-container{
   padding: 8rem 0;
@@ -137,6 +143,7 @@ ol, ul{
  .exp-wrapper, .anticipation-wrapper{
   padding: 5rem 0;
 }
+
 
 /*-- exp --*/
 .exp-wrapper{
@@ -157,6 +164,7 @@ ol, ul{
   box-shadow: 10px 10px 30px #010101;
   transform: translateY(-50px);
 }
+
 
 /*-- skill --*/
 .skill-wrapper .badge{
@@ -193,6 +201,7 @@ ol, ul{
   transform: translate(-50%,-10%);
 }
 
+
 /*-- work --*/
 .work-wrapper .img-content{
   border-radius: 20px 20px 0 0;
@@ -208,19 +217,15 @@ ol, ul{
   border-radius: 20px;
   box-shadow: 8px 8px 15px #000;
 }
-.work-wrapper .card .demo{
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
 .work-wrapper .card .card-detail{
   display: none;
 }
+
+
 /*-- anticipation --*/
 .anticipation-content{
   position: relative;
 }
-
 .anticipation-content .vertical-line{
   position: absolute;
   z-index: 0;
@@ -301,22 +306,13 @@ ol, ul{
   background-color: #36F1CD;
 }
 
+
+/*-- footer --*/
 footer{
   text-align: center;
   border-top: 1px solid #222;
 }
 
-/* slider setting*/
-.work-slider{
-  width: 100%;
-  height: auto;
-}
-.slick-dots li button:before{
-  color: #36F1CD; 
-}
-.slick-dots li.slick-active button:before{
-  color: #36F1CD; 
-}
 
 /*---------- scroll trigger ----------*/
 .visible, .invisible {
@@ -329,22 +325,6 @@ footer{
 
 /*---------- break-point ----------*/
 @media(max-width: 990px){
-  .contact-wrapper form{
-    margin-top: 2rem;
-  }
-  .skill-wrapper, .work-wrapper, .contact-wrapper, .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
-    padding: 10rem 3rem;
-  }
-  .exp-wrapper .col-lg-4{
-    margin-bottom: 2rem;
-  }
-  .exp-wrapper .card:hover{
-    transform: translateY(0);
-    box-shadow: 10px 10px 30px #010101;
-  }
-}
-
-@media(max-width: 768px){
   .navbar{
     width: 100vw;
   }
@@ -359,10 +339,34 @@ footer{
     margin-top: 2rem;
     margin-left: 5rem;
   }
+  .contact-wrapper form{
+    margin-top: 2rem;
+  }
+  .skill-wrapper, .work-wrapper, .contact-wrapper, 
+  .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
+    padding: 10rem 3rem;
+  }
+  .exp-wrapper .col-lg-4{
+    margin-bottom: 2rem;
+  }
+  .exp-wrapper .card:hover{
+    transform: translateY(0);
+    box-shadow: 10px 10px 30px #010101;
+  }
+}
+
+@media(max-width: 768px){
   .aboutme-content{
     margin-top: 2rem;
   }
-  .skill-wrapper, .work-wrapper, .contact-wrapper, .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
+  .aboutme-container .headshot-img{
+    max-width: 200px;
+  }
+  .download-cv{
+    width: 120px;
+  }
+  .skill-wrapper, .work-wrapper, .contact-wrapper, 
+  .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
     padding-top: 0rem;
   }
   .anticipation-content .vertical-line{
@@ -383,7 +387,8 @@ footer{
     bottom: 0;
     height: 60px;
   }
-  .skill-wrapper, .work-wrapper, .contact-wrapper, .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
+  .skill-wrapper, .work-wrapper, .contact-wrapper, 
+  .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
     padding: 0 1rem;
   }
   .anticipation-content .vertical-line{
@@ -392,6 +397,3 @@ footer{
   }
 }
 
-@media(max-width: 350px){
-
-}
