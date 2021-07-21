@@ -4,7 +4,7 @@
       transform: translateY(0);
     }
     to{
-      transform: translateY(2px);
+      transform: translateY(6px);
     }
   }
   @keyframes rightArmLower{
@@ -12,7 +12,7 @@
       transform: translate(0,0) rotate(0);
     }
     to{
-      transform: translate(55px,-44px) rotate(10deg)
+      transform: rotate(8deg) translate(90px, -95px);
     }
   }
   
@@ -21,7 +21,7 @@
       transform: translate(0,0) rotate(0);
     }
     to{
-      transform: translate(-26px, 37px) rotate(-6deg);
+      transform: translate(-60px, 140px) rotate(-7deg);
     }
   }
   
@@ -30,7 +30,7 @@
       transform: translate(0,0);
     }
     to{
-      transform: translate(7px, 0);
+      transform: translate(45px, 0);
     }
   }
   
@@ -39,7 +39,7 @@
       transform: translate(0,0);
     }
     to{
-      transform: translate(10px, 1px)  
+      transform: translate(40px, 1px);
     }
   }
 
@@ -94,16 +94,16 @@
     animation: eyeBrows 1.5s infinite alternate;
   }
   #right-arm-lower{
-    animation: rightArmLower 1.5s infinite alternate;
+    animation: rightArmLower 2s infinite alternate;
   }
   #left-arm-upper{
-    animation: leftArmUpper 1.5s infinite alternate;
+    animation: leftArmUpper 2s infinite alternate;
   }
   #left-arm-lower{
-    animation: leftArmLower 1.5s infinite alternate;
+    animation: leftArmLower 2s infinite alternate;
   }
   #hand{
-    animation: hand 1.5s infinite alternate;
+    animation: hand 2s infinite alternate;
   }
 
   #background-1{
