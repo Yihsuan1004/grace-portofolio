@@ -1,6 +1,3 @@
-import '../src/styles/animate.css';
-import '../src/styles/index.css';
-
 
 $(document).ready(function () {
     console.log('i am ready')
