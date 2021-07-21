@@ -4,14 +4,14 @@ import '../src/styles/index.css';
 
 $(document).ready(function () {
     console.log('i am ready')
-    $(window).on('load', function () {
+    $(window).ready(function () {
         $('#loading').hide();
         $('body').removeClass('fixed-top');
         ScrollTrigger.refresh();
         console.log('load success');
         const observer = lozad(); 
         observer.observe();
-      }) 
+    });
 
     /* ---- 語言切換  ----*/
     $('[lang="en"]').hide();
