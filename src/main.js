@@ -3,32 +3,30 @@ $(document).ready(function () {
     console.log('i am ready')
 
     $(window).ready(function () {
-        setTimeout(function () {
-            $('#loading').hide();
-            $('body').removeClass('fixed-top');
-            ScrollTrigger.refresh();
-            console.log('load success');
-            const observer = lozad();
-            observer.observe();
-        }, 1000)
+        $('#loading').hide();
+        $('body').removeClass('fixed-top');
+        ScrollTrigger.refresh();
+        console.log('load success');
+        const observer = lozad(); 
+        observer.observe();
     });
 
 
     /* ---- 語言切換  ----*/
     $('[lang="en"]').hide();
-    $('#select_language').click(function () {
+    $('#select_language').click(function() {
         $('[lang="tw"]').toggle();
         $('[lang="en"]').toggle();
         $('.collapse').hide();
         $('body').removeClass('fixed-top')
     });
 
-    $('.navbar-toggler').click(function () {
+    $('.navbar-toggler').click(function(){
         $('.collapse').toggle();
         $('body').toggleClass('fixed-top')
     })
 
-    $('.collapse li').click(function () {
+    $('.collapse li').click(function(){
         $('.collapse').hide();
         $('body').removeClass('fixed-top')
     });
@@ -86,7 +84,7 @@ $(document).ready(function () {
         }
     }
 
-
+    
 
     // ------------ Scroll Trigger Setting ------------ 
     let aboutmeTL = gsap.timeline({
@@ -109,8 +107,8 @@ $(document).ready(function () {
             toggleActions: "restart none none reset"
         }
     })
-        .from('.exp-wrapper .card', { xPercent: 100, stagger: 0.2, duration: 2, ease: "back" })
-        .from('.exp-wrapper .card', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
+    .from('.exp-wrapper .card', { xPercent: 100, stagger: 0.2, duration: 2, ease: "back" })
+    .from('.exp-wrapper .card', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
 
     let atcpTL = gsap.timeline({
         scrollTrigger: {
@@ -120,8 +118,8 @@ $(document).ready(function () {
             toggleActions: "restart none none reset"
         }
     })
-        .from('.item-content', { xPercent: 100, stagger: 0.3, duration: 2, ease: "power3" })
-        .from('.item-content', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
+    .from('.item-content', { xPercent: 100, stagger: 0.3, duration: 2, ease: "power3" })
+    .from('.item-content', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
 
     const setProgressValue = () => {
         let options = {
@@ -130,7 +128,7 @@ $(document).ready(function () {
             fill: { gradient: ["#36F1CD", "#268874"] }
         }
         $('.circle .bar').circleProgress(options).on('circle-animation-progress',
-            function (event, progress, stepValue) { })
+        function (event, progress, stepValue) { })
         $('#circle_html').circleProgress({ value: 0.80 });
         $('#circle_css').circleProgress({ value: 0.72 });
         $('#circle_sass').circleProgress({ value: 0.65 });
@@ -165,9 +163,9 @@ $(document).ready(function () {
     }).from('.work-wrapper .card', { yPercent: 100, stagger: 0.2, duration: 2, ease: "power3" })
         .from('.work-wrapper .card', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
 
+   
 
-
-
+ 
 
 
 })
