@@ -5,21 +5,22 @@ $(document).ready(function () {
     $(window).ready(function () {
         $('#loading').hide();
         $('body').removeClass('fixed-top');
+        $(this).scrollTop(0);
         ScrollTrigger.refresh();
         console.log('load success');
         const observer = lozad(); 
         observer.observe();
     });
-
-
-    /* ---- 語言切換  ----*/
-    $('[lang="en"]').hide();
-    $('#select_language').click(function() {
-        $('[lang="tw"]').toggle();
-        $('[lang="en"]').toggle();
-        $('.collapse').hide();
-        $('body').removeClass('fixed-top')
-    });
+    
+    var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+    triggerTabList.forEach(function (triggerEl) {
+      var tabTrigger = new bootstrap.Tab(triggerEl)
+    
+      triggerEl.addEventListener('click', function (event) {
+        event.preventDefault()
+        tabTrigger.show()
+      })
+    })
 
     $('.navbar-toggler').click(function(){
         $('.collapse').toggle();
@@ -99,16 +100,16 @@ $(document).ready(function () {
         .from('.aboutme-container', { opacity: 0, duration: 0.5 }, 0)
 
 
-    let expTL = gsap.timeline({
+    let mainTL = gsap.timeline({
         scrollTrigger: {
-            trigger: ".exp-wrapper",
-            start: "top 80%",
+            trigger: ".main-wrapper",
+            start: "top 50%",
             end: "bottom top",
             toggleActions: "restart none none reset"
         }
     })
-    .from('.exp-wrapper .card', { xPercent: 100, stagger: 0.2, duration: 2, ease: "back" })
-    .from('.exp-wrapper .card', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
+    .from('.main-wrapper .title-content',  { yPercent: 100, duration: 1.5, ease: "back" })
+    .from('.main-wrapper .title-content', { opacity: 0, stagger: 0.2, duration: 1 }, 0)
 
     let atcpTL = gsap.timeline({
         scrollTrigger: {
@@ -124,23 +125,38 @@ $(document).ready(function () {
     const setProgressValue = () => {
         let options = {
             startAngle: -1.55,
-            size: 140,
-            fill: { gradient: ["#36F1CD", "#268874"] }
+            size: 100,
         }
         $('.circle .bar').circleProgress(options).on('circle-animation-progress',
         function (event, progress, stepValue) { })
-        $('#circle_html').circleProgress({ value: 0.80 });
-        $('#circle_css').circleProgress({ value: 0.72 });
-        $('#circle_sass').circleProgress({ value: 0.65 });
-        $('#circle_javascript').circleProgress({ value: 0.65 });
-        $('#circle_jquery').circleProgress({ value: 0.60 });
-        $('#circle_angular').circleProgress({ value: 0.60 });
-        $('#circle_react').circleProgress({ value: 0.45 });
-        $('#circle_redux').circleProgress({ value: 0.40 });
+        $('#circle_procreate').circleProgress({ 
+            value: 0.85,
+            fill: { color: "#FFD2D2" }
+        });
+        $('#circle_photoshop').circleProgress({
+             value: 0.85,
+             fill: { color: "#FFD2D2" }
+         });
+        $('#circle_illustrator').circleProgress({ 
+            value: 0.85,
+            fill:  '#FF5858'
+        });
+        $('#circle_inDesign').circleProgress({ 
+            value: 0.75,
+            fill:  '#FF5858'
+         });
+        $('#circle_figma').circleProgress({ 
+            value: 0.75,
+            fill: '#899FC9'
+         });
+        $('#circle_adobexd').circleProgress({ 
+            value: 0.60,
+            fill: '#899FC9'
+         });
     };
 
     const resetProgressValue = () => {
-        $('#circle_html, #circle_css,#circle_sass,#circle_javascript,#circle_jquery,#circle_angular,#circle_react,#circle_redux ').circleProgress({ value: 0 });
+        $('#circle_procreate, #circle_photoshop,#circle_illustrator,#circle_inDesign,#circle_figma,#circle_adobexd').circleProgress({ value: 0 });
     };
 
     ScrollTrigger.create({

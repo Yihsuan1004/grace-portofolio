@@ -1,195 +1,53 @@
 /*animation*/
-@keyframes eyeBrows{
-    from{
-      transform: translateY(0);
+@keyframes firstStop{
+    0%{
+      stop-color: #97C0FC;
     }
-    to{
-      transform: translateY(6px);
+    50%{
+      stop-color: #869EE2;
     }
-  }
-  @keyframes rightArmLower{
-    from{
-      transform: translate(0,0) rotate(0);
-    }
-    to{
-      transform: rotate(8deg) translate(90px, -95px);
-    }
-  }
-  
-  @keyframes leftArmUpper{
-    from{
-      transform: translate(0,0) rotate(0);
-    }
-    to{
-      transform: translate(-60px, 140px) rotate(-7deg);
-    }
-  }
-  
-  @keyframes leftArmLower{
-    from{
-      transform: translate(0,0);
-    }
-    to{
-      transform: translate(45px, 0);
-    }
-  }
-  
-  @keyframes hand{
-    from{
-      transform: translate(0,0);
-    }
-    to{
-      transform: translate(40px, 1px);
-    }
-  }
-
-  @keyframes slideTyping {
     100%{
-      top: -200px;
+      stop-color: #E294F5;
     }
   }
-
-  @keyframes typing {
+  
+@keyframes secondStop{
+    0%{
+      stop-color: #869EE2;
+    }
+    50%{
+      stop-color: #E294F5;
+    }
     100%{
-        left: 100%;
+      stop-color: #97C0FC;
     }
-  }
+}
   
-  @keyframes backgroundMoveRightTop {
-    from{
-        transform: translate(0);
-      }
-    to{
-        transform: translate(10px, 5px)  
-    }
-  }
-  @keyframes backgroundMoveLeftTop {
-    from{
-        transform: translate(0,0);
-      }
-    to{
-        transform: translate(-20px,-30px)  
-    }
-  }
-  @keyframes backgroundMoveRight {
-    from{
-        transform: translateX(0);
-      }
-    to{
-        transform: translateX(20px)  
-    }
-  }
-  @keyframes backgroundMoveLeft {
-    from{
-        transform: translateX(0);
-      }
-    to{
-        transform: translateX(-20px)  
-    }
-  }
   
+@keyframes thirdStop{
+    0%{
+      stop-color: #E294F5;
+    }
+    50%{
+      stop-color: #97C0FC;
+    }
+    100%{
+      stop-color: #869EE2;
+    }
+ }
+  
+  
+.first-stop{
+ animation: firstStop 1.6s infinite alternate;
+}
  
+.second-stop{
+  animation: secondStop 1.6s infinite alternate;
+ }
+ 
+ .third-stop{
+  animation: thirdStop 1.6s infinite alternate;
+ }
   
-  #eyebrows{
-    animation: eyeBrows 1.5s infinite alternate;
-  }
-  #right-arm-upper{
-    animation: rightArmLower 2s infinite alternate;
-  }
-  #left-arm-upper{
-    animation: leftArmUpper 2s infinite alternate;
-  }
-  #left-arm-lower{
-    animation: leftArmLower 2s infinite alternate;
-  }
-  #hand{
-    animation: hand 2s infinite alternate;
-  }
+  
 
-  #background-1{
-    animation: backgroundMoveRightTop 3s infinite alternate;
-  }
-  #background-2{
-    animation: backgroundMoveLeftTop 3s infinite alternate;
-  }
-  #background-3{
-    animation: backgroundMoveRight 3s infinite alternate;
-  }
-  #background-4{
-    animation: backgroundMoveLeft 3s infinite alternate;
-  }
-  
-  
-  .main-wrapper .dynamic-texts{
-    padding-left: unset;
-    list-style: none;
-    height: 6.5rem;
-    line-height: 6.5rem;
-    overflow: hidden;
-  }
-  
-  .dynamic-texts .display-2{
-    white-space: nowrap;
-  }
-  .dynamic-texts li{
-    position: relative;
-    top: 0;
-    animation: slideTyping 8s steps(2) infinite;
-  }
-  .dynamic-texts li .type-content{
-    position: relative;
-  }
-  .dynamic-texts li .type-content::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1b1e21;
-    border-left: 2px solid #36F1CD;
-  }
-  .dynamic-name .type-content::after{
-    animation: typing 4s steps(30) infinite;
-  }
-  .dynamic-occupation .type-content::after{
-    min-width: 500px;
-    animation: typing 4s steps(50) infinite;
-  }
-
-  @media(max-width: 990px){
-    .dynamic-texts .dynamic-name .type-content::after{
-        height: 60px;
-    }
-    .dynamic-texts .dynamic-occupation .type-content::after{
-        height: 60px;
-    }
-   
-  }
-  @media(max-width: 480px){
-      
-    .dynamic-texts .dynamic-name .type-content::after{
-        bottom: 0;
-        height: 50px;
-    }
-    .dynamic-texts .dynamic-occupation .type-content::after{
-        bottom: 0;
-        height: 50px;
-    }
-  }
-  @media(max-width: 350px){
-    .dynamic-texts .dynamic-name .type-content::after{
-        bottom: 0;
-         height: 50px;
-    }
-    .dynamic-texts .dynamic-occupation .type-content::after{
-        bottom: 0;
-        height: 50px;
-    }
-    .description {
-        font-size: 12px; 
-    }
-    .dynamic-texts li .fs-1{
-        font-size: 18px !important; 
-    }
-  }
