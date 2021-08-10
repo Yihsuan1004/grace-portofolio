@@ -1,13 +1,12 @@
 
 $(document).ready(function () {
-    console.log('i am ready')
-
     $(window).ready(function () {
         $('#loading').hide();
         $('body').removeClass('fixed-top');
         $(this).scrollTop(0);
         ScrollTrigger.refresh();
-        console.log('load success');
+        const observer = lozad(); 
+        observer.observe();
     });
     
     var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
