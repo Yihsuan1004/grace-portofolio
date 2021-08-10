@@ -213,7 +213,6 @@ ol, ul{
   border: none;
   height: 100%;
 }
-
 .skill-wrapper .bar{
   position: relative;
 }
@@ -255,6 +254,7 @@ ol, ul{
 .work-wrapper .portofolio-content{
   margin-top: 6rem;
 }
+
 .portofolio-cover-branding:hover{
   cursor: pointer;
   transition: .2s;
@@ -276,6 +276,28 @@ ol, ul{
   opacity: 1;
   background-color: #FFD2D2;
 }
+.portofolio-hyperlink{
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+}
+.portofolio-hyperlink-branding:hover{
+  background-color:#d34747;
+  color: #fff;
+}
+.portofolio-hyperlink-project:hover{
+  background-color:#5970af;
+  color: #fff;
+}
+.portofolio-hyperlink-UIUX{
+  border: 2px solid #C15B5B;
+  color: #C15B5B;
+}
+.portofolio-hyperlink-UIUX:hover{
+  background-color:#bb5252;
+  color: #fff;
+}
+
 .work-wrapper .container{
   max-width: 960px;
 }
