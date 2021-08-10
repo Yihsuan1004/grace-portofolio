@@ -1,5 +1,5 @@
 {
-  "name": "my-portfolio2021",
+  "name": "grace-portfolio2021",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yihsuan1004/my-portfolio2021.git"
+    "url": "git+https://github.com/Yihsuan1004/grace-portfolio2021.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yihsuan1004/my-portfolio2021/issues"
+    "url": "https://github.com/Yihsuan1004/grace-portfolio2021/issues"
   },
-  "homepage": "https://github.com/Yihsuan1004/my-portfolio2021#readme"
+  "homepage": "https://github.com/Yihsuan1004/grace-portfolio2021#readme"
 }
