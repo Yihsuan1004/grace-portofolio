@@ -8,8 +8,6 @@ $(document).ready(function () {
         $(this).scrollTop(0);
         ScrollTrigger.refresh();
         console.log('load success');
-        const observer = lozad(); 
-        observer.observe();
     });
     
     var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
@@ -24,68 +22,24 @@ $(document).ready(function () {
 
     $('.navbar-toggler').click(function(){
         $('.collapse').toggle();
-        $('body').toggleClass('fixed-top')
+        $('.brand').toggleClass('brand-hide');
+        $('.empty-block').toggle();
+        $('#navbar_toggle_icon').toggleClass('navbar-toggler-icon-close');
     })
 
     $('.collapse li').click(function(){
-        $('.collapse').hide();
-        $('body').removeClass('fixed-top')
+        $('.collapse').removeClass('show');
+        $('.brand').removeClass('brand-hide');
+        $('.empty-block').hide();
+        $('#navbar_toggle_icon').removeClass('navbar-toggler-icon-close');
     });
 
     $(document).scroll(function () {
         const $nav = $("#navbar");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-        let currentWindowOffset = $(document).scrollTop();
-        navbarActive(currentWindowOffset);
     });
 
-    $('.nav-item').click(function () {
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-    })
 
-    $('.brand').click(function () {
-        $('.nav-item').removeClass('active');
-    })
-
-    function navbarActive(offset) {
-        const home_offset = $('#home_block').offset().top;
-        const aboutme_offset = $('#aboutme_block').offset().top - 30;
-        const exp_offset = $('#exp_block').offset().top - 100;
-        const skill_offset = $('#skill_block').offset().top - 60;
-        const work_offset = $('#work_block').offset().top - 60;
-        const anticipation_offset = $('#anticipation_block').offset().top - 60;
-        const contact_offset = $('#contact_block').offset().top - 80;
-        if (offset < aboutme_offset) {
-            $('.nav-item').removeClass('active');
-        }
-        if (offset > aboutme_offset) {
-            $('#aboutme_item').addClass('active');
-            $('#aboutme_item').siblings().removeClass('active');
-        }
-        if (offset > exp_offset) {
-            $('#exp_item').addClass('active');
-            $('#exp_item').siblings().removeClass('active');
-        }
-        if (offset > skill_offset) {
-            $('#skill_item').addClass('active');
-            $('#skill_item').siblings().removeClass('active');
-        }
-        if (offset > work_offset) {
-            $('#work_item').addClass('active');
-            $('#work_item').siblings().removeClass('active');
-        }
-        if (offset >= anticipation_offset) {
-            $('#anticipation_item').addClass('active');
-            $('#anticipation_item').siblings().removeClass('active');
-        }
-        if (offset >= contact_offset) {
-            $('#contact_item').addClass('active');
-            $('#contact_item').siblings().removeClass('active');
-        }
-    }
-
-    
 
     // ------------ Scroll Trigger Setting ------------ 
     let aboutmeTL = gsap.timeline({
@@ -108,19 +62,8 @@ $(document).ready(function () {
             toggleActions: "restart none none reset"
         }
     })
-    .from('.main-wrapper .title-content',  { yPercent: 100, duration: 1.5, ease: "back" })
-    .from('.main-wrapper .title-content', { opacity: 0, stagger: 0.2, duration: 1 }, 0)
-
-    let atcpTL = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".anticipation-wrapper",
-            start: "top 50%",
-            end: "bottom top",
-            toggleActions: "restart none none reset"
-        }
-    })
-    .from('.item-content', { xPercent: 100, stagger: 0.3, duration: 2, ease: "power3" })
-    .from('.item-content', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
+    .from('.main-wrapper .title-content',  { opacity: 0, duration: 2, ease: "linear" })
+    .to('.main-wrapper .title-content', { opacity: 1})
 
     const setProgressValue = () => {
         let options = {
@@ -169,15 +112,7 @@ $(document).ready(function () {
         onLeaveBack: resetProgressValue,
     })
 
-    let workTL = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".work-wrapper",
-            start: "top 80%",
-            end: "bottom top",
-            toggleActions: "restart none none reset"
-        }
-    }).from('.work-wrapper .card', { yPercent: 100, stagger: 0.2, duration: 2, ease: "power3" })
-        .from('.work-wrapper .card', { opacity: 0, stagger: 0.2, duration: 0.5 }, 0)
+   
 
    
 

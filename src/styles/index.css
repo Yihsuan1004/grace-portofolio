@@ -120,22 +120,26 @@ ol, ul{
 
 
 /*----- cotainer styles -----*/
-.navbar-dark .brand{
-  font-size: 2rem;
+
+.navbar{
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.navbar-dark .brand:hover{
-  color: #39A0ED;
+.nav-icon:hover{
+  fill: #FF5858;
 }
-.navbar-dark .nav-item .nav-link:hover{
-  color: #36F1CD;
-  transition: ease-in(.5s);
+.navbar-nav{
+  align-items: center;
 }
-.navbar-dark .active .nav-link{
-  color: #36F1CD;
-  border-bottom: 2px solid #36F1CD;
+
+/*在手機裝置上當brand消失補上brand的位置，避免nav-toggle跑版*/
+.navbar .empty-block{
+  display: none;
+  width: 50px;
+  height: 50px;
 }
 .scrolled{
-  background-color: #fff;
   transition: .2s;
   box-shadow: 0 10px 20px #eaeaea;
 }
@@ -171,6 +175,9 @@ ol, ul{
 
 
 /*-- about me --*/
+.aboutme-padding-top{
+  padding-top: 8rem;
+}
 .aboutme-wrapper{
   transform: skewY(-3deg);
 }
@@ -190,17 +197,23 @@ ol, ul{
 .quote-text{
   color: #aaa;
 }
-.aboutme-wrapper,.skill-wrapper, .work-wrapper, .contact-wrapper,
+.aboutme-wrapper,.skill-wrapper,
  .exp-wrapper, .anticipation-wrapper{
   padding: 5rem 0;
 }
 
 /*-- skill --*/
+.skill-wrapper .bg-triangle{
+  position: absolute;
+  left: -8%;
+}
 .skill-wrapper .card{
   box-shadow: 3px 6px 12px #bbb;
   border-radius: 20px;
   border: none;
+  height: 100%;
 }
+
 .skill-wrapper .bar{
   position: relative;
 }
@@ -218,10 +231,50 @@ ol, ul{
 
 
 /*-- work --*/
+.work-wrapper{
+  padding-bottom: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+.work-wrapper .bg-circle{
+  position: absolute;
+  z-index: -1;
+  right: -8%;
+}
 .work-wrapper .portofolio-item{
-  max-width: 300px;
-  height: 300px;
+  position: relative;
+}
+.portofolio-cover-branding, .portofolio-cover-project, .portofolio-cover-UIUX{
+  position: absolute;
+  padding: 1.5rem;
+  width: 300px;
+  height: 100%;
+  color: #fff;
+  opacity: 0;
+}
+.work-wrapper .portofolio-content{
+  margin-top: 6rem;
+}
+.portofolio-cover-branding:hover{
+  cursor: pointer;
+  transition: .2s;
+  opacity: 1;
   background-color: #FF5858;
+}
+.portofolio-cover-project:hover{
+  cursor: pointer;
+  transition: .2s;
+  opacity: 1;
+  background-color: #869EE2;
+}
+.portofolio-cover-UIUX{
+  color: #C15B5B;
+}
+.portofolio-cover-UIUX:hover{
+  cursor: pointer;
+  transition: .2s;
+  opacity: 1;
+  background-color: #FFD2D2;
 }
 .work-wrapper .container{
   max-width: 960px;
@@ -242,48 +295,18 @@ ol, ul{
 }
 
 
-/*-- contact --*/
-.contact-wrapper{
-  padding-bottom: 12rem;
-}
-.contact-wrapper .contact-info{
-  margin-left: 1rem;
-}
-.contact-wrapper .hyperlink-icon{
-  margin-right: 1rem;
-  color: #6c757d;
-}
-.contact-wrapper button:hover{
-  border: 1px solid #36F1CD;
-  color: #36F1CD;
-  background-color: unset;
-  transition: .3s;
-}
-.contact-wrapper .hyperlink-icon:hover{
-  color: #36F1CD;
-}
-.contact-wrapper input, .contact-wrapper textarea{
-  border: 1px solid #3a3a3a;
-  background-color: #1b1e21;
-  color: #36F1CD;
-}
-.contact-wrapper input:focus ,.contact-wrapper textarea:focus  {
-  background-color: #32363a;
-  border-color: #36F1CD;
-  color: #36F1CD;
-}
-.contact-form button:hover{
-  color: #010101;
-  background-color: #36F1CD;
-}
 
 
 /*-- footer --*/
 footer{
+  padding: 5rem 0;
   text-align: center;
-  border-top: 1px solid #222;
+  background-color: #899FC9 ;
 }
-
+footer .container{
+  max-width: 1120px;
+  justify-content: center;
+}
 
 /*---------- scroll trigger ----------*/
 .visible, .invisible {
@@ -302,9 +325,32 @@ footer{
   .navbar .collapse{
     height: calc(100vh - 40px);
   }
+  .navbar .navbar-nav{
+    margin-top: 10%;
+    align-items: flex-start;
+  }
+  .navbar .nav-icon{
+    display: none;
+  }
   .navbar .navbar-nav li{
     padding: 1rem;
     font-size: 24px;
+  }
+  .navbar .brand img{
+    width: 50px;
+    height: auto;
+  }
+  .navbar .navbar-toggler{
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .navbar-toggler .navbar-toggler-icon-close{
+    width: 1.2rem;
+    background-image: url('../../public/assets/images/cancel.png');
+  }
+  .brand-hide{
+    display: none;
   }
   .navbar .btn-select-language{
     margin-top: 2rem;
@@ -336,43 +382,50 @@ footer{
     grid-column-end: 3;
     justify-self: center;
   }
-  .work-wrapper .container{
+  .aboutme-wrapper .headshot-img{
+    position: unset;
+  }
+  .work-wrapper .container, footer .container{
     max-width: 660px;
   }
-  .contact-wrapper form{
-    margin-top: 2rem;
-  }
-  
-  .skill-wrapper, .work-wrapper, .contact-wrapper, 
-  .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
+
+  .work-wrapper,.exp-wrapper,.aboutme-wrapper,.skill-wrapper {
     padding: 5rem 3rem;
+  }
+
+  .skill-wrapper{
+    padding-bottom: 0rem;
+  }
+  .skill-wrapper .skill-item{
+    margin-bottom: 2rem;
   }
   .skill-wrapper .card{
     margin: 0 auto;
     margin-bottom: 1rem;
     max-width: 380px;
   }
+  
 }
 
 @media(max-width: 768px){
   .aboutme-content{
     margin-top: 2rem;
   }
-  .aboutme-container .headshot-img{
-    max-width: 200px;
-  }
-  .download-cv{
-    width: 120px;
+  .aboutme-padding-top{
+    padding-top: 0;
   }
   .work-wrapper{
     padding-top: 1rem;
   }
+  .work-wrapper .bg-circle, .skill-wrapper .bg-triangle{
+    display: none;
+  }
   .work-wrapper .portofolio-item{
     margin: 0 auto;
+    text-align: center;
   }
-  .skill-wrapper, .contact-wrapper, 
-  .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
-    padding-top: 0rem;
+  .skill-wrapper, .aboutme-wrapper, .exp-wrapper{
+    padding-top: 5rem;
   }
   .anticipation-content .vertical-line{
     height: 72%;
@@ -388,17 +441,22 @@ footer{
 
 @media(max-width: 480px){
   html { font-size: 12px ;} 
-  .dynamic-texts .dynamic-occupation .type-content::after{
-    bottom: 0;
-    height: 60px;
+  .navbar .navbar-toggler{
+    width: 40px;
+    height: 40px;
   }
-  .skill-wrapper,.contact-wrapper, 
-  .exp-wrapper,.aboutme-wrapper, .anticipation-wrapper{
-    padding: 0 1rem;
+  .skill-wrapper,.work-wrapper, 
+  .exp-wrapper,.aboutme-wrapper{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .anticipation-content .vertical-line{
-    height: 75%;
-    left: 16px;
+  .aboutme-wrapper{
+    padding-top: 7rem;
+    padding-bottom: 4rem;
   }
+  .work-wrapper{
+    padding-top: 2rem;
+  }
+
 }
 
