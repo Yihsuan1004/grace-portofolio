@@ -410,7 +410,10 @@ footer .container{
   .work-wrapper .container, footer .container{
     max-width: 660px;
   }
-
+  .portofolio-cover-branding, .portofolio-cover-project, .portofolio-cover-UIUX{
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .work-wrapper,.exp-wrapper,.aboutme-wrapper,.skill-wrapper {
     padding: 5rem 3rem;
   }
